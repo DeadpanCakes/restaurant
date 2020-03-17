@@ -29,7 +29,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    color: #385c87;
 }
 ol, ul {
 	list-style: none;
@@ -49,34 +50,81 @@ table {
 
 body {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     height: 1080px;
     width: auto;
-    background-image: url("../img/homepage.png");
+    background-image: url("../img/restaurant3f.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#content {
-
+header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    background-color: #cfdfe8;
+}
+
+.navList {
+    display: flex;
+}
+
+.navListings {
+    padding: 20px;
+    background-color: #ded99e;
+    font-family: 'Maitree';
+    font-family: 'Offside';
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     width: 95%;
-    padding-bottom: 800px;
-    color: #3a103f;
-    text-shadow: 1px 1px 3px cornsilk;
+    padding-bottom: 600px;
     backdrop-filter: blur(5px);
-    border: 4px solid #594850;
+    border: 4px solid #2B3937;
     border-bottom: none;
     border-radius: 5px 5px 0  0;
 }
 
+main {
+    flex-basis: 60%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #cfdfe8;
+    border-radius: 5px;
+}
+
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
+    font-family: 'Alegreya Sans SC';
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 5px;
+    align-self: center;
 }
 
 h3 {
     font-size: 1.5em;
+    font-family: 'Offside';
+}
+
+p {
+    font-family: "Maitree";
+}
+
+a:link {
+    color: #4b7bb6;
+    font-size: 1.5em;
+    font-style: italic;
+    text-decoration: #cfdfe8;
+}
+
+a:hover {
+    color: #75B7AB;
+    text-decoration: underline #75B7AB;
 }
