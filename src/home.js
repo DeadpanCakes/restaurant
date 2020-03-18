@@ -67,4 +67,56 @@ homeAside2.appendChild(pandesal)
 
 const homeFooter = makeFooter.cloneNode()
 
+const homeFooterH1 = makeH1.cloneNode()
+homeFooterH1.textContent = "Follow Us!"
+
+const homeFooterSocial = makeUl.cloneNode()
+homeFooterSocial.id = "socialNav"
+
+const socialLinkContainer0 = makeLi.cloneNode()
+const socialLinkContainer1 = makeLi.cloneNode()
+const socialLinkContainer2 = makeLi.cloneNode()
+const socialLinkContainer3 = makeLi.cloneNode()
+const socialLinkContainer4 = makeLi.cloneNode()
+
+const socialLink0 = makeA.cloneNode()
+socialLink0.href = "https://www.yelp.com"
+const socialLink1 = makeA.cloneNode() 
+socialLink1.href = "https://www.twitter.com"
+const socialLink2 = makeA.cloneNode() 
+socialLink2.href = "https://www.instagram.com"
+const socialLink3 = makeA.cloneNode() 
+socialLink3.href = "https://www.facebook.com"
+const socialLink4 = makeA.cloneNode()
+socialLink4.href = "https://www.spotify.com"
+
+const yelp = makeI.cloneNode()
+yelp.classList = "fab fa-yelp social"
+const twitter = makeI.cloneNode()
+twitter.classList = "fab fa-twitter social"
+const instagram = makeI.cloneNode()
+instagram.classList = "fab fa-instagram social"
+const facebook = makeI.cloneNode()
+facebook.classList = "fab fa-facebook social"
+const spotify = makeI.cloneNode()
+spotify.classList = "fab fa-spotify social"
+
+homeFooter.appendChild(homeFooterH1)
+homeFooter.appendChild(homeFooterSocial)
+homeFooterSocial.appendChild(socialLinkContainer0)
+socialLinkContainer0.appendChild(socialLink0)
+socialLink0.appendChild(yelp)
+homeFooterSocial.appendChild(socialLinkContainer1)
+socialLinkContainer1.appendChild(socialLink1)
+socialLink1.appendChild(twitter)
+homeFooterSocial.appendChild(socialLinkContainer2)
+socialLinkContainer2.appendChild(socialLink2)
+socialLink2.appendChild(instagram)
+homeFooterSocial.appendChild(socialLinkContainer3)
+socialLinkContainer3.appendChild(socialLink3)
+socialLink3.appendChild(facebook)
+homeFooterSocial.appendChild(socialLinkContainer4)
+socialLinkContainer4.appendChild(socialLink4)
+socialLink4.appendChild(spotify)
+
 export { homeMain, homeAside1, homeAside2, homeFooter }
