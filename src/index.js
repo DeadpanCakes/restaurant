@@ -1,41 +1,75 @@
+import { homeMain, homeAside1, homeAside2, homeFooter } from "./modules.js"
+
+console.log(homeAside1, homeAside2, homeFooter)
+
+const makeMain = () => document.createElement("main")
+const makeH1 = () => document.createElement("h1")
+const makeH3 = () => document.createElement("h3")
+const makeUl = () => document.createElement("ul")
+const makeP = () => document.createElement("p")
+const makeLi = () => document.createElement("li")
+const makeA = () => document.createElement("a")
+const makeAside = () => document.createElement("aside")
+const makeImg = () => document.createElement("img")
+const makeFooter = () => document.createElement("footer")
+const makeI = () => document.createElement("i")
+
 const content = document.getElementById("content")
-const makeDiv = () => document.createElement("DIV")
-const makeH1 = () => document.createElement("H1")
-const makeH3 = () => document.createElement("H3")
-const makeNav = () => document.createElement("NAV")
-const makeMain = () => document.createElement("MAIN")
-const makeP = () => document.createElement("P")
-const makeUl = () => document.createElement("UL")
-const makeLi = () => document.createElement("LI")
-const makeA = () => document.createElement("A")
 
-content.appendChild(makeMain())
-const main = document.getElementById("content").querySelector("main")
+content.appendChild(homeMain)
 
-main.appendChild(makeH1())
-main.querySelector("H1").textContent = "Cinderella's"
-main.appendChild(makeH3().cloneNode())
-main.querySelector("H3").textContent = "Filipino Comfort Food"
-main.appendChild(makeP())
-main.querySelector("P").textContent = "The child of Chef Kuya Angelo, Cinderella's is an ode to the Filipino-American upbringing-- weirdness and all."
-main.appendChild(makeH3().cloneNode())
-main.lastElementChild.textContent = "Read More About Us:"
-main.appendChild(makeUl())
-main.querySelector("UL").appendChild(makeLi())
-main.querySelector("UL").lastElementChild.appendChild(makeA())
-main.querySelector("UL").appendChild(makeLi())
-main.querySelector("UL").lastElementChild.appendChild(makeA())
-main.querySelector("UL").appendChild(makeLi())
-main.querySelector("UL").lastElementChild.appendChild(makeA())
+content.appendChild(makeAside().cloneNode())
+content.lastElementChild.className = "homePageFood"
+content.lastElementChild.id = "sisig"
+content.appendChild(makeAside().cloneNode())
+content.lastElementChild.className = "homePageFood"
+content.lastElementChild.id = "pandesal"
+const homePageFood = document.querySelectorAll(".homePageFood")
 
-const quotes = main.querySelector("UL").querySelectorAll("LI")
+homePageFood[0].appendChild(makeImg().cloneNode())
+homePageFood[0].querySelector("img").src = "../img/sisig.jpg"
 
-quotes[0].lastElementChild.textContent = "Being at Cinderella's makes me feel nostaligic for a time I didn't know existied... -- NYTimes"
-quotes[1].lastElementChild.textContent = "My go to spot whenever I'm in the area (which is often, for the record)... -- Max's Food Channel"
-quotes[2].lastElementChild.textContent = "The atmosphere's relaxed, the food great... -- WeEat.com"
-quotes[0].lastElementChild.href = "https://www.nytimes.com"
-quotes[1].lastElementChild.href = "https://www.youtube.com"
-quotes[2].lastElementChild.href = "https://www.google.com"
+homePageFood[1].appendChild(makeImg().cloneNode())
+homePageFood[1].querySelector("img").src = "../img/pandesal.JPG"
 
+content.appendChild(makeFooter().cloneNode())
+const footer = content.querySelector("footer")
+console.log(footer)
+footer.appendChild(makeH1().cloneNode())
+footer.querySelector("H1").textContent = "Follow Us"
+footer.appendChild(makeUl().cloneNode())
+footer.querySelector("UL").id = "socialNav";
+footer.querySelector("UL").appendChild(makeLi().cloneNode())
+footer.querySelector("UL").appendChild(makeLi().cloneNode())
+footer.querySelector("UL").appendChild(makeLi().cloneNode())
+footer.querySelector("UL").appendChild(makeLi().cloneNode())
+footer.querySelector("UL").appendChild(makeLi().cloneNode())
+footer.querySelector("UL").appendChild(makeLi().cloneNode())
+
+const social = footer.querySelector("UL").querySelectorAll("LI")
+social[0].appendChild(makeA().cloneNode())
+social[0].querySelector("A").href =  "https://www.yelp.com"
+social[0].querySelector("A").appendChild(makeI().cloneNode())
+social[0].lastElementChild.classList = "fab fa-yelp social"
+
+social[1].appendChild(makeA().cloneNode())
+social[1].querySelector("A").href =  "https://www.twitter.com"
+social[1].querySelector("A").appendChild(makeI().cloneNode())
+social[1].lastElementChild.classList = "fab fa-twitter social"
+
+social[2].appendChild(makeA().cloneNode())
+social[2].querySelector("A").href =  "https://www.instagram.com"
+social[2].querySelector("A").appendChild(makeI().cloneNode())
+social[2].lastElementChild.classList = "fab fa-instagram social"
+
+social[3].appendChild(makeA().cloneNode())
+social[3].querySelector("A").href =  "https://www.facebook.com"
+social[3].querySelector("A").appendChild(makeI().cloneNode())
+social[3].lastElementChild.classList = "fab fa-facebook social"
+
+social[4].appendChild(makeA().cloneNode())
+social[4].querySelector("A").href =  "https://www.spotify.com"
+social[4].querySelector("A").appendChild(makeI().cloneNode())
+social[4].lastElementChild.classList = "fab fa-spotify social"
 
 console.log(content)
