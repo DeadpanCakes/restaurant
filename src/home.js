@@ -47,10 +47,24 @@ homeMain.appendChild(homeMainH1)
 homeMain.appendChild(homeMainH3)
 homeMain.appendChild(homeMainUl)
 
-
-
 const homeAside1 = makeAside.cloneNode()
 const homeAside2 = makeAside.cloneNode()
+
+const sisig = makeImg.cloneNode()
+const pandesal = makeImg.cloneNode()
+
+sisig.src = "../img/sisig.jpg"
+sisig.alt = "An image of pork sisig"
+pandesal.src = "../img/pandesal.JPG"
+pandesal.alt = "An image of a pan de sal filled with a scoop of ube ice cream"
+
+homeAside1.id = "sisig"
+homeAside1.className = "homePageFood"
+homeAside1.appendChild(sisig)
+homeAside2.id = "pandesal"
+homeAside2.className = "homePageFood"
+homeAside2.appendChild(pandesal)
+
 const homeFooter = makeFooter.cloneNode()
 
 export { homeMain, homeAside1, homeAside2, homeFooter }

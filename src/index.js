@@ -17,20 +17,8 @@ const makeI = () => document.createElement("i")
 const content = document.getElementById("content")
 
 content.appendChild(homeMain)
-
-content.appendChild(makeAside().cloneNode())
-content.lastElementChild.className = "homePageFood"
-content.lastElementChild.id = "sisig"
-content.appendChild(makeAside().cloneNode())
-content.lastElementChild.className = "homePageFood"
-content.lastElementChild.id = "pandesal"
-const homePageFood = document.querySelectorAll(".homePageFood")
-
-homePageFood[0].appendChild(makeImg().cloneNode())
-homePageFood[0].querySelector("img").src = "../img/sisig.jpg"
-
-homePageFood[1].appendChild(makeImg().cloneNode())
-homePageFood[1].querySelector("img").src = "../img/pandesal.JPG"
+content.appendChild(homeAside1)
+content.appendChild(homeAside2)
 
 content.appendChild(makeFooter().cloneNode())
 const footer = content.querySelector("footer")
