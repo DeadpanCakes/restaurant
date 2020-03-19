@@ -1,21 +1,25 @@
-import { homeMain, homeAside1, homeAside2, homeFooter, infoMain, infoAside } from "./modules.js"
+import { homeMain, homeAside1, homeAside2, homeFooter, infoMain, infoAside, infoFooter } from "./modules.js"
+
 
 const content = document.getElementById("content");
 
-console.log(infoAside)
+const init = () => {
+    let x = content.childNodes.length
+    for (let i = 0; i < x; i++) {
+        content.removeChild(content.lastElementChild)
+    }
+}
 
 const goToHome = () => {
-    content.appendChild(homeMain);
-    content.appendChild(homeAside1);
-    content.appendChild(homeAside2);
-    content.appendChild(homeFooter);
+    init();
+    const homeArray = [homeMain, homeAside1, homeAside2, homeFooter]
+    homeArray.forEach(element => content.appendChild(element))
 };
 
 const goToInfo = () => {
-    const infoFooter = homeFooter
-    content.appendChild(infoMain)
-    content.appendChild(infoAside)
-    content.appendChild(infoFooter)
+    init()
+    const infoArray = [infoMain, infoAside, infoFooter]
+    infoArray.forEach(element => content.appendChild(element))
 };
 
 const applyHomeEvent = (() => {
@@ -31,3 +35,7 @@ const applyInfoEvent = (() => {
         link[i].addEventListener("click", () => goToInfo())
     }
 })()
+
+document.addEventListener('DOMContentLoaded', () => {
+    goToHome()
+  })

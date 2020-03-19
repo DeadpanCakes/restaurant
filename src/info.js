@@ -56,6 +56,17 @@ house.alt = "The old Mendoza Family house"
 infoAside.appendChild(house)
 infoAside.id = "infoAside"
 
+const infoFooter = makeFooter.cloneNode()
+const infoFooterH1 = makeH1.cloneNode()
+infoFooterH1.textContent = "Contact Us"
+const infoFooterAddress = makeP.cloneNode()
+infoFooterAddress.textContent = "Address: 610 1st Ave, San Diego, CA 92101"
+const infoFooterNumber = makeP.cloneNode()
+infoFooterNumber.textContent = "Number: (619) 515-1460"
+infoFooter.appendChild(infoFooterH1)
+infoFooter.appendChild(infoFooterAddress)
+infoFooter.appendChild(infoFooterNumber)
+
 infoMain.appendChild(infoMainH1)
 infoMain.appendChild(infoMainBio)
 infoMain.appendChild(infoMainBioP)
@@ -64,4 +75,4 @@ infoMain.appendChild(infoMainBackgroundP)
 infoMain.appendChild(infoMainMission)
 infoMain.appendChild(infoMainMissionP)
 
-export { infoMain, infoAside }
+export { infoMain, infoAside, infoFooter }
