@@ -1,4 +1,4 @@
-import { homeMain, homeAside1, homeAside2, homeFooter, infoMain, infoAside, infoFooter } from "./modules.js"
+import { homeMain, homeAside1, homeAside2, homeFooter, menuSweetContainer, infoMain, infoAside, infoFooter } from "./modules.js"
 
 
 const content = document.getElementById("content");
@@ -16,6 +16,11 @@ const goToHome = () => {
     homeArray.forEach(element => content.appendChild(element))
 };
 
+const goToMenuSweet = () => {
+    init();
+    content.appendChild(menuSweetContainer);
+}
+
 const goToInfo = () => {
     init()
     const infoArray = [infoMain, infoAside, infoFooter]
@@ -29,12 +34,19 @@ const applyHomeEvent = (() => {
     }
 })()
 
+const applyMenuSweetEvent = (() => {
+    let link = document.querySelectorAll(".menuSweetLink")
+    for (let i = 0; i < link.length; i++) {
+        link[i].addEventListener("click", () => goToMenuSweet())
+    }
+})();
+
 const applyInfoEvent = (() => {
     let link = document.querySelectorAll(".infoPageLink")
     for (let i = 0; i < link.length; i++) {
         link[i].addEventListener("click", () => goToInfo())
     }
-})()
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
     goToHome()

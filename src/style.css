@@ -110,6 +110,40 @@ main > * {
     grid-column: 1 / span 3;
 }
 
+#menuSaltyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+#menuSweetContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+#menuSaltyUl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#menuSweetUl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 
 #quoteContainer {
     display: flex;
@@ -280,6 +314,7 @@ p {
 
 li {
     padding-top: 10px;
+    text-align: center;
 }
 
 a:link {
