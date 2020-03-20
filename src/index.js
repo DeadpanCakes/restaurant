@@ -1,4 +1,4 @@
-import { homeMain, homeAside1, homeAside2, homeFooter, menuSweetContainer, infoMain, infoAside, infoFooter } from "./modules.js"
+import { homeMain, homeAside1, homeAside2, homeFooter, menuSaltyContainer, menuSweetContainer, infoMain, infoAside, infoFooter } from "./modules.js"
 
 
 const content = document.getElementById("content");
@@ -15,6 +15,11 @@ const goToHome = () => {
     const homeArray = [homeMain, homeAside1, homeAside2, homeFooter]
     homeArray.forEach(element => content.appendChild(element))
 };
+
+const goToMenuSalty = () => {
+    init();
+    content.appendChild(menuSaltyContainer);
+}
 
 const goToMenuSweet = () => {
     init();
@@ -33,6 +38,13 @@ const applyHomeEvent = (() => {
         link[i].addEventListener("click", () => goToHome())
     }
 })()
+
+const applyMenuSaltyEvent = (() => {
+    let link = document.querySelectorAll(".menuSaltyLink")
+    for (let i = 0; i < link.length; i++) {
+        link[i].addEventListener("click", () => goToMenuSalty())
+    }
+})();
 
 const applyMenuSweetEvent = (() => {
     let link = document.querySelectorAll(".menuSweetLink")

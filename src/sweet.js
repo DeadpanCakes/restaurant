@@ -33,6 +33,8 @@ const makeSweet = (name, desc, price) => {
 
 const menuSweet = makeH1.cloneNode();
 menuSweet.textContent = "Sweets";
+const menuSweetH3 = makeH3.cloneNode();
+menuSweetH3.textContent = "We Make No Distinction Between Our Two Menus; Feel Free To Pick Something Here As Your Meal";
 
 const menuSweetUl = makeUl.cloneNode();
 menuSweetUl.id = "menuSweetUl"
@@ -45,7 +47,7 @@ const iceCream = makeSweet("ICECREAM", "A Large Scoop Of Ube or Mango Ice Cream,
 
 const bibinka = makeSweet("BIBINKA", "Rice Cake Soaked in Coconut Milk, Baked with Fresh Cheese and Salted Eggs, and Topped With A Dusting of Sugar", 1)
 
-const menuSweetArray = [menuSweet, champorado.makeElement(), turon.makeElement(), iceCream.makeElement(), bibinka.makeElement()]
+const menuSweetArray = [menuSweet, menuSweetH3, champorado.makeElement(), turon.makeElement(), iceCream.makeElement(), bibinka.makeElement()]
 
 const menuSweetContainer = makeMain.cloneNode();
 menuSweetArray.forEach(element => menuSweetUl.appendChild(element));

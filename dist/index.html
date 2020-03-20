@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>test</title>
     <link rel="stylesheet" href="../src/style.css">
@@ -8,20 +9,27 @@
     <link rel="stylesheet" href="../src/css/fontawesome.min.css" type="text/css">
     <link rel="stylesheet" href="../src/css/brands.min.css" type="text/css">
 </head>
+
 <body>
     <header>
         <div>
-            <h1 class = "homePageLink">Cinderella's</h1>
+            <h1 class="homePageLink">Cinderella's</h1>
         </div>
         <nav>
-            <ul class = "navList">
-                <li class = "navListings homePageLink">
+            <ul class="navList">
+                <li class="navListings homePageLink">
                     Home
                 </li>
-                <li class = "navListings menuSweetLink">
-                    Menu
-                </li>
-                <li class = "navListings infoPageLink">
+                <div id = "dropdown">
+                    <li class="navListings menuSaltyLink">
+                        Menu
+                    </li>
+                    <ul id = "dropdown-contents">
+                        <li class = "menuSaltyLink">Salty</li>
+                        <li class = "menuSweetLink" >Sweet</li>
+                    </ul>
+                </div>
+                <li class="navListings infoPageLink">
                     Info
                 </li>
             </ul>
